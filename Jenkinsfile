@@ -14,11 +14,21 @@ pipeline {
                 }
             }
 
+            stage("sonarqube"){
+
+                steps{
+                    echo " run sonarqube"
+                }
+            }
+
             stage("k8s"){
 
                 steps {
                     echo "kubectl apply -f test";
                 }
             }
+
+
+
     }
 }
